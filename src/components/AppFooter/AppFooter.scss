@@ -1,0 +1,45 @@
+.app-footer {
+  z-index: 20;
+  max-height: 56px;
+  border-top: 1px solid var(--border-neutral-tertiary);
+  background-color: var(--background-neutral-low);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-width: var(--max-width-container);
+  margin: 0 auto;
+}
+
+.footer-home-ico-w {
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  min-height: 40px;
+  background-image: url("/src/assets/images/wojak.svg");
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    width: 48px;
+    height: 48px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: var(--background-neutral-low);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    transform: translate(-50%, -50%);
+    border: 1px solid var(--border-neutral-secondary);
+    border-radius: 50%;
+  }
+}

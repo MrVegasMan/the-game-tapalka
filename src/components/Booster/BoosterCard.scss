@@ -1,0 +1,19 @@
+.booster-card {
+  border-radius: var(--radius-550);
+  background-color: var(--background-neutral-low);
+
+  &__image {
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+    max-width: 40%;
+    max-height: 200px;
+    padding-top: 20px;
+  }
+}
+
+.booster-card-lvl-w {
+  margin-left: 8px;
+  border: 2px solid var(--border-neutral-primary);
+  border-radius: var(--radius-300);
+}

@@ -1,0 +1,116 @@
+@import "reset";
+@import "fonts";
+@import "typography";
+@import "mods";
+
+:root {
+
+  --max-width-container: 700px;
+
+  /* Basic fonts переделать */
+  --font-family-primary: 'Bai Jamjuree', sans-serif;
+  --font-family-secondary: 'Jersey 20', sans-serif;
+
+  /* General values чекнуть */
+  --letter-spacing-0: 0;
+  --line-height-100: 100%;
+  --line-height-120: 120%;
+  --line-height-130: 130%;
+  --line-height-140: 140%;
+
+  /* Text sizes переделать */
+  --font-size-h1: 32px;
+  --font-size-h2: 24px;
+  --font-size-h3: 20px;
+  --font-size-body-l: 20px;
+  --font-size-body-m: 16px;
+  --font-size-body-s: 14px;
+  --font-size-body-xs: 13px;
+
+
+  /* Indents переделать */
+  --indents-64: 64px;
+  --indents-56: 56px;
+  --indents-48: 48px;
+  --indents-40: 40px;
+  --indents-32: 32px;
+  --indents-24: 24px;
+  --indents-16: 16px;
+  --indents-12: 12px;
+  --indents-8: 8px;
+  --indents-4: 4px;
+
+  /* Radius */
+  --radius-550: 20px;
+  --radius-300: 8px;
+  --radius-600: 24px;
+
+
+  /* Spacing */
+  --spacing-100: 4px;
+  --spacing-200: 8px;
+  --spacing-300: 12px;
+  --spacing-350: 16px;
+  --spacing-400: 20px;
+
+  /* Colors */
+  --layer-floor-0: #111014;
+  --layer-floor-1: #1C1B20;
+  --content-neutral-primary: #FFF;
+  --content-neutral-tertiary: #8E8E8E;
+  --content-static-dark-primary: #111014;
+  --content-neutral-secondary: #B3B2B2;
+  --content-positive-primary: #DBFDA5;
+  --background-positive-high: #A9F927;
+  --background-brand-high: #FF5387;
+  --background-neutral-low: #1C1B20;
+  --overlay-neutral: rgb(142 142 142 / 4%);
+  --overlay-static-dark: rgb(17 16 20 / 60%);
+  --neutral-secondary: rgb(17 16 20 / 8%);
+  --border-neutral-tertiary: rgb(255 255 255 / 4%);
+  --border-neutral-secondary: rgb(255 255 255 / 6%);
+  --border-neutral-primary: rgb(255 255 255 / 12%);
+
+
+  /* Transitions */
+  --transition-time-and-easing: 0.3s cubic-bezier(0.37, 0, 0.63, 1);
+
+  color-scheme: light dark;
+  font-family: "Bai Jamjuree", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-synthesis: none;
+  text-rendering: optimizelegibility;
+}
+
+html, body {
+  scrollbar-gutter: stable;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: var(--max-width-container);
+  margin: 0 auto;
+  background-color: var(--layer-floor-0);
+  color: var(--content-neutral-primary);
+  font-family: var(--font-family-primary), sans-serif;
+  font-size: 16px;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.p-lr-spacing-350 {
+  padding: 0 var(--spacing-350, 16px);
+}
+
+.p-lr-spacing-100 {
+  padding: 0 var(--spacing-100, 4px);
+}

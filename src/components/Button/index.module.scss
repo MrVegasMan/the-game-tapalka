@@ -1,0 +1,19 @@
+.btn_close {
+  background-color: var(--overlay-neutral, rgb(17 16 20 / 8%));
+  color: var(--content-neutral-primary), #fff;
+  transition: background-color var(--transition-time-and-easing), color var(--transition-time-and-easing);
+}
+
+@media (hover: hover) {
+  .btn_close:hover {
+    background-color: var(--background-positive-high, #A9F927);
+    color: var(--content-static-dark-primary, #111014);
+  }
+}
+
+@media (hover: none) {
+  .btn_close:active {
+    background-color: var(--background-positive-high, #A9F927);
+    color: var(--content-static-dark-primary, #111014);
+  }
+}

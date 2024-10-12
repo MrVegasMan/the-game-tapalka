@@ -1,0 +1,19 @@
+.leader-board-card {
+  padding: 16px 20px;
+  background: var(--background-neutral-low);
+  border-radius: 20px;
+}
+
+.leader-board-rank-w {
+  display: flex;
+  width: 72px;
+  height: 40px;
+  padding: 5px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+
+  &.bordered {
+    border: 1px solid var(--border-neutral-secondary);
+  }
+}

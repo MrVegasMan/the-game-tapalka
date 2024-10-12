@@ -1,0 +1,32 @@
+$tap-btn-border: 16px;
+$tap-btn-outline: 6px;
+
+
+.tap-btn {
+  width: 100%;
+  margin: 3em;
+  transition: all var(--transition-easing) .025s;
+  border: $tap-btn-border solid #161519;
+  outline: $tap-btn-outline solid var(--content-static-dark-primary);
+  outline-offset: -$tap-btn-border;
+  background-image: url("/src/assets/images/wojak.svg");
+  background-size: 110%;
+  aspect-ratio: 1;
+  font-size: 16px;
+
+
+  &:active {
+    border: $tap-btn-border solid var(--background-brand-high);
+    background-size: 100%;
+  }
+}
+
+particle {
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  pointer-events: none;
+}

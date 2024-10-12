@@ -1,0 +1,72 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-recommended",
+    "stylelint-config-property-sort-order-smacss",
+    "stylelint-config-standard-scss",
+    "stylelint-config-css-modules"
+  ],
+  "ignoreFiles": [
+    "dist/**"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.css",
+        "**/*.css",
+        "*.scss",
+        "**/*.scss"
+      ],
+      "customSyntax": "postcss-scss",
+      "extends": [
+        "stylelint-config-standard-scss",
+        "stylelint-config-property-sort-order-smacss"
+      ],
+      "rules": {
+        "scss/no-global-function-names": null,
+        "at-rule-no-unknown": [
+          true,
+          {
+            "ignoreAtRules": [
+              "include",
+              "mixin",
+              "extend"
+            ]
+          }
+        ],
+        "function-no-unknown": [
+          true,
+          {
+            "ignoreFunctions": [
+              "px",
+              "em",
+              "rem"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "plugins": [
+    "stylelint-order"
+  ],
+  "rules": {
+    "block-no-empty": null,
+    "media-query-no-invalid": null,
+    "function-calc-no-unspaced-operator": true,
+    "selector-class-pattern": [
+      "[a-z]+",
+      {
+        "resolveNestedSelectors": true
+      }
+    ],
+    "declaration-block-no-redundant-longhand-properties": [
+      true,
+      {
+        "ignoreShorthands": [
+          "/grid/"
+        ]
+      }
+    ]
+  }
+}
