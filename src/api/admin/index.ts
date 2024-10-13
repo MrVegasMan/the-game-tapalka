@@ -1,19 +1,25 @@
-export default function createAdminApi(appFeatch:Promise<any>){
+import type { AxiosInstance } from 'axios';
+
+import type { OfferAdmin, ResponseOfferAdmin } from '@/types/types.ts';
+
+export default function createAdminApi(instanceAxios: AxiosInstance) {
     return {
-        getTaskGroups:()=>{
-            return (await appFeatch)("/admin/offerwall", {
-                method: "GET",
-            });
+        getTaskGroups: async () => {
+            return await instanceAxios.get<ResponseOfferAdmin>('/admin/offerwall');
         },
-        postTaskGroups:()=>{
-            return (await appFeatch)("/admin/offerwall", {
-                method: "POST",
-            });
+        postTaskGroups: async (body: OfferAdmin) => {
+            return await instanceAxios.post('/admin/offerwall', body);
         },
-        postTaskGroupsMedia:()=>{
-            return (await appFeatch)("/media", {
-                method: "GET",
+        postTaskGroupsMedia: async (imageType: 'task_cover' | 'group_cover' | 'user_cover' | 'booster_cover', file: File) => {
+            return await instanceAxios.post('/media', {
+                imageType,
+                file
+            },
+            {
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                }
             });
         }
-    }
+    };
 }

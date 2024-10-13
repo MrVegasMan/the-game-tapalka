@@ -112,7 +112,8 @@ export default defineConfig({
             '@hooks': fileURLToPath(new URL('./src/hooks', import.meta.url)),
             '@assets': fileURLToPath(new URL('./src/assets', import.meta.url)),
             '@icon': fileURLToPath(new URL('./src/assets/ico', import.meta.url)),
-            '@styles': fileURLToPath(new URL('./src/styles', import.meta.url))
+            '@styles': fileURLToPath(new URL('./src/styles', import.meta.url)),
+            '@api': fileURLToPath(new URL('./src/api', import.meta.url))
         }
     },
     css: {

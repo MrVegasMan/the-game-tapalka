@@ -18,6 +18,7 @@ export type OfferAdmin = {
     taskTemplates: TaskTemplateAdmin[];
 };
 
+export type ResponseOfferAdmin = OfferAdmin[];
 // Authorization Entrypoint POST
 
 export type Answer = {

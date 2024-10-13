@@ -1,9 +1,9 @@
-export default function createAuthorizationApi(appFeatch:Promise<any>){
+import type { AxiosInstance } from 'axios';
+
+export default function createAuthorizationApi(instanceAxios: AxiosInstance) {
     return {
-        postCreateUser:()=>{
-            return (await appFeatch)("/entrypoint", {
-                method: "POST",
-            });
+        postCreateUser: async () => {
+            return await instanceAxios.post('/entrypoint', {});
         }
-    }
-}
+    };
+};

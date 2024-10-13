@@ -1,6 +1,16 @@
 import './homePage.scss';
 
+import useApi from '@hooks/useApi.ts';
+
 function Home() {
+    const { adminApi } = useApi();
+    async function oferwall() {
+        const res = await adminApi.getTaskGroups();
+        if (res.status === 200) {
+            console.log(res.data[0]);
+        }
+    }
+
     return (
         <div className="p-lr-spacing-100">
             <div className="flex flex-col items-center gap-8px">
@@ -29,6 +39,10 @@ function Home() {
                         </p>
                     </div>
                 </div>
+
+                <button type="button" onClick={oferwall}>
+                    oferwall
+                </button>
 
             </div>
 
