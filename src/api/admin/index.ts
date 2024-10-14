@@ -1,6 +1,6 @@
 import type { AxiosInstance } from 'axios';
 
-import type { OfferAdmin, ResponseOfferAdmin } from '@/types/types.ts';
+import type { OfferAdmin, ResponseOfferAdmin } from '../types.ts';
 
 export default function createAdminApi(instanceAxios: AxiosInstance) {
     return {

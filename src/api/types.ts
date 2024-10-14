@@ -59,6 +59,11 @@ export type AuthorizationData = {
     user: User;
 };
 
+// Health-Check GET
+export type HealthCheck = {
+    health: number;
+};
+
 // Leaderboard GET
 
 export type LeaderboardEntry = {
@@ -71,10 +76,10 @@ export type LeaderboardEntry = {
     username: string;
 };
 
-// type Leaderboard = LeaderboardEntry[];
+export type Leaderboard = LeaderboardEntry[];
 
-// OfferWall GET
-export type Task = {
+// UserOfferWall GET
+export type UserTask = {
     completed: boolean;
     description: string;
     id: string;
@@ -87,7 +92,7 @@ export type Task = {
     type: 'subscribe_tg' | 'another_type';
 };
 
-export type Offerwall = {
+export type UserOfferwall = {
     completed: boolean;
     description: string;
     earned: number;
@@ -97,8 +102,10 @@ export type Offerwall = {
     };
     name: string;
     reward: number;
-    tasks: Task[];
+    tasks: UserTask[];
 };
+
+export type ResponseUserOfferwall = UserOfferwall[];
 
 // OfferWall POST
 export type TaskIdRequest = {
@@ -124,6 +131,10 @@ export type OfflineEarningRequest = {
 };
 
 // User Profile GET
+export type UserRank = {
+    rank: number;
+};
+
 export type UserProfile = {
     first_name: string;
     id: string;
@@ -140,6 +151,19 @@ export type UserProfile = {
     };
     username: string;
 };
+
+// Referrals GET
+
+export type UserReferrals = {
+    first_name: string;
+    id: string;
+    is_premium: boolean;
+    last_name: string;
+    total_earned: number;
+    username: string;
+};
+
+export type ResponseUserReferrals = UserReferrals[];
 
 // Wallet POST
 export type WalletRequest = {
