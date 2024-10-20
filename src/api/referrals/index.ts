@@ -1,14 +1,11 @@
 import type { AxiosInstance } from 'axios';
 
-import type { UserProfile, UserRank } from '../types.ts';
+import type { ResponseUserReferrals } from '../types.ts';
 
-export default function createUserApi(instanceAxios: AxiosInstance) {
+export default function createReferralsApi(instanceAxios: AxiosInstance) {
     return {
-        getUserRank: async () => {
-            return await instanceAxios.get<UserRank>('/rank');
-        },
-        getUserProfile: async () => {
-            return await instanceAxios.get<UserProfile>('/user');
+        getReferrals: async () => {
+            return await instanceAxios.get<ResponseUserReferrals>('/referral');
         }
     };
 }

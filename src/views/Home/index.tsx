@@ -1,5 +1,6 @@
 import './homePage.scss';
 
+import TestUserStore from '@components/TestUserStore/TestUserStore.tsx';
 import useApiRequest from '@hooks/useApiRequest.ts';
 
 function Home() {
@@ -12,7 +13,7 @@ function Home() {
     //     }
     // }
 
-    const { data, pending, success, error, request } = useApiRequest('userApi', 'getReferrals', { autorun: false });
+    const { data, pending, success, error, request } = useApiRequest('userApi', 'getUserProfile', { autorun: false });
     console.log(data, pending, success, error);
 
     return (
@@ -51,7 +52,7 @@ function Home() {
                 <button type="button" onClick={request}>
                     oferwall
                 </button>
-
+                <TestUserStore />
             </div>
 
         </div>

@@ -11,9 +11,9 @@ interface ButtonClose {
 export function ButtonClose({ onClick }: ButtonClose) {
     return (
         <button onClick={onClick} className={`rounded-full p-8 ${styles.btn_close}`}>
-            <span className="ico-16px">
-                <CloseIcon />
-            </span>
+
+            <CloseIcon />
+
         </button>
     );
 }

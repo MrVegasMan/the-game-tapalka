@@ -12,7 +12,7 @@ import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
-    { ignores: ['dist', 'archive'] },
+    { ignores: ['dist'] },
     {
 
         files: ['**/*.{js,mjs,cjs,ts,mts,jsx,tsx}'],

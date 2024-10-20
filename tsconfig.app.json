@@ -43,15 +43,11 @@
       ],
       "@styles/*": [
         "./src/styles/*"
-      ],
-      "@api/*": [
-        "./src/api/*"
       ]
     },
     "allowSyntheticDefaultImports": true
   },
   "include": [
     "src"
-  ],
-  "exclude": ["archive"],
+  ]
 }
